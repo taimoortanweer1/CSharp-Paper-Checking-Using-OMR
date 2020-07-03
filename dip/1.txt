@@ -1,0 +1,35 @@
+public void points(int x, int y)
+        {
+            double radius;
+            //  int j = 1;
+
+            rad = float.Parse(textBox3.Text);
+            for (double t = 0; t < rad; t += 0.5)
+            {
+
+                radius = t;
+                for (int i = 0; i < 360; i += 1)
+                {
+
+                    double angle = i * System.Math.PI / 180;
+                    int p = (int)(x + radius * System.Math.Cos(angle));
+                    int q = (int)(y + radius * System.Math.Sin(angle));
+
+
+                    //try
+                    {
+                        if (isblack(p, q))
+                            v += 1;
+
+                    }
+                    //  catch { }
+
+                    b += 1;
+
+                }
+            }
+
+
+
+
+        }
